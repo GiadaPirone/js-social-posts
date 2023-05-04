@@ -56,45 +56,58 @@ const posts = [
     }
 ];
 //creo div .post
-nuovoDiv = document.createElement("div");
-nuovoDiv.className ="post";
-document.querySelector(".posts-list").appendChild(nuovoDiv);
+ const divPost = document.createElement("div");
+ divPost.className ="post";
+ document.querySelector(".posts-list").appendChild(divPost);
 // funzioneNuovoDiv("post",".posts-list" );
 
 //creo div postHeader
-nuovoDiv1 = document.createElement("div");
-nuovoDiv1.className ="post__header";
-nuovoDiv.appendChild(nuovoDiv1);
+const divPostHeade = document.createElement("div");
+divPostHeade.className ="post__header";
+divPost.appendChild(divPostHeade);
 
 //creo div postMeta
-nuovoDiv2 = document.createElement("div");
-nuovoDiv2.className ="post-meta";
-nuovoDiv1.appendChild(nuovoDiv2);
+const divPostMeta = document.createElement("div");
+divPostMeta.className ="post-meta";
+divPostHeade.appendChild(divPostMeta);
 
 //creo div postMetaIcon dentro post meta
-nuovoDiv2_1 = document.createElement("div");
-nuovoDiv2_1.className ="post-meta__icon";
-nuovoDiv2.appendChild(nuovoDiv2_1);
-nuovoDiv2_1.innerHTML = `<img class="profile-pic" src="https://unsplash.it/300/300?image=15" alt="Phil Mangione"></img>`
+const divPostMetaIcon = document.createElement("div");
+divPostMetaIcon.className ="post-meta__icon";
+divPostMeta.appendChild(divPostMetaIcon);
+divPostMetaIcon.innerHTML = `<img class="profile-pic" src="https://unsplash.it/300/300?image=15" alt="Phil Mangione"></img>`
 
 //creo div postMetadata dentro post meta
-nuovoDiv2_2 = document.createElement("div");
-nuovoDiv2_2.className ="post-meta__data";
-nuovoDiv2.appendChild(nuovoDiv2_2);
+const divPostMetaData = document.createElement("div");
+divPostMetaData.className ="post-meta__data";
+divPostMeta.appendChild(divPostMetaData);
 
 
 //creo postmetaauthor e postmetatime che sono dentro a post meta data
 //postmetaauthor
-nuovoDiv2_2_1 = document.createElement("div");
-nuovoDiv2_2_1.className = "post-meta__author";
-nuovoDiv2_2.appendChild(nuovoDiv2_2_1);
-nuovoDiv2_2_1.innerHTML ="Phil Mangione";
+const divPostMetaAuthor = document.createElement("div");
+divPostMetaAuthor.className = "post-meta__author";
+divPostMetaData.appendChild(divPostMetaAuthor);
+divPostMetaAuthor.innerHTML =`${posts[0].author.name}`;
 
 //postmetatime
-nuovoDiv2_2_2 = document.createElement("div");
-nuovoDiv2_2_2.className = "post-meta__time";
-nuovoDiv2_2.appendChild(nuovoDiv2_2_2);
-nuovoDiv2_2_2.innerHTML ="4 mesi fa";
+const divPostMetaTime = document.createElement("div");
+divPostMetaTime.className = "post-meta__time";
+divPostMetaData.appendChild(divPostMetaTime);
+divPostMetaTime.innerHTML ="4 mesi fa";
+
+const divPostText = document.createElement("div");
+divPostText.className = "post__text";
+divPost.appendChild(divPostText);
+divPostText.innerHTML = `${posts[0].content}`;
+
+const divPostImage = document.createElement("div");
+divPostImage.className ="post__image";
+divPost.appendChild(divPostImage);
+divPostImage.innerHTML = `<img src="https://unsplash.it/600/300?image=171" alt="">`
+
+
+
 
 
 
