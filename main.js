@@ -59,6 +59,7 @@ const posts = [
 nuovoDiv = document.createElement("div");
 nuovoDiv.className ="post";
 document.querySelector(".posts-list").appendChild(nuovoDiv);
+// funzioneNuovoDiv("post",".posts-list" );
 
 //creo div postHeader
 nuovoDiv1 = document.createElement("div");
@@ -97,8 +98,9 @@ nuovoDiv2_2_2.innerHTML ="4 mesi fa";
 
 
 
+// function funzioneNuovoDiv( classe, query ){
+//   const  nuovoDiv = document.createElement("div");
+//   nuovoDiv.className = classe;
+//   document.querySelector(query).appendChild(nuovoDiv);
+// }
 
-//     nuovoDiv = document.createElement("div");
-//     nuovoDiv.className = ".square";
-//     nuovoDiv.innerText += `${membro.nome} ${ membro.ruolo } ${ membro.foto}`;
-//     document.querySelector("body").appendChild(nuovoDiv);
