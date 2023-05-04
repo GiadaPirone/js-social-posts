@@ -80,8 +80,7 @@ divPostHeade.appendChild(divPostMeta);
 const divPostMetaIcon = document.createElement("div");
 divPostMetaIcon.className ="post-meta__icon";
 divPostMeta.appendChild(divPostMetaIcon);
-console.log(posts[0].author.image);
-divPostMetaIcon.innerHTML = `${posts[0].author.image}`;
+divPostMetaIcon.innerHTML = `<img src="${posts[i].author.image}" alt="" class="profile-pic">`
 
 //creo div postMetadata dentro post meta
 const divPostMetaData = document.createElement("div");
@@ -110,7 +109,7 @@ divPostText.innerHTML = `${posts[i].content}`;
 const divPostImage = document.createElement("div");
 divPostImage.className ="post__image";
 divPost.appendChild(divPostImage);
-divPostImage.innerHTML = `<img src="https://unsplash.it/600/300?image=171" alt="">`
+divPostImage.innerHTML = `<img src="${posts[i].media}" alt="">`;
 
 
 }
