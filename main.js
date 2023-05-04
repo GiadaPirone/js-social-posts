@@ -55,6 +55,11 @@ const posts = [
         "created": "2021-03-05"
     }
 ];
+
+for (let i = 0; i < posts.length; i++) {
+    const postCorrente = posts[i];
+    
+
 //creo div .post
  const divPost = document.createElement("div");
  divPost.className ="post";
@@ -75,7 +80,8 @@ divPostHeade.appendChild(divPostMeta);
 const divPostMetaIcon = document.createElement("div");
 divPostMetaIcon.className ="post-meta__icon";
 divPostMeta.appendChild(divPostMetaIcon);
-divPostMetaIcon.innerHTML = `<img class="profile-pic" src="https://unsplash.it/300/300?image=15" alt="Phil Mangione"></img>`
+console.log(posts[0].author.image);
+divPostMetaIcon.innerHTML = `${posts[0].author.image}`;
 
 //creo div postMetadata dentro post meta
 const divPostMetaData = document.createElement("div");
@@ -88,7 +94,7 @@ divPostMeta.appendChild(divPostMetaData);
 const divPostMetaAuthor = document.createElement("div");
 divPostMetaAuthor.className = "post-meta__author";
 divPostMetaData.appendChild(divPostMetaAuthor);
-divPostMetaAuthor.innerHTML =`${posts[0].author.name}`;
+divPostMetaAuthor.innerHTML =`${posts[i].author.name}`;
 
 //postmetatime
 const divPostMetaTime = document.createElement("div");
@@ -99,7 +105,7 @@ divPostMetaTime.innerHTML ="4 mesi fa";
 const divPostText = document.createElement("div");
 divPostText.className = "post__text";
 divPost.appendChild(divPostText);
-divPostText.innerHTML = `${posts[0].content}`;
+divPostText.innerHTML = `${posts[i].content}`;
 
 const divPostImage = document.createElement("div");
 divPostImage.className ="post__image";
@@ -107,7 +113,7 @@ divPost.appendChild(divPostImage);
 divPostImage.innerHTML = `<img src="https://unsplash.it/600/300?image=171" alt="">`
 
 
-
+}
 
 
 
